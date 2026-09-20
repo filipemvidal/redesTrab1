@@ -50,7 +50,7 @@ public class EchoClient {
                 System.err.println("Server disconnected.");
                 break; // Servidor fechou a conexão
             }
-            System.out.println("[" + screenName + "] " + resposta);
+            System.out.println("[" + screenName + "]: " + resposta);
         }
 
         // Encerra os sockets

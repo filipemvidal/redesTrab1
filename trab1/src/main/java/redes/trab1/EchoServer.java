@@ -36,8 +36,6 @@ class ClientThread extends Thread {
     public void run() {
         try {
             // Cria as "streams" para o socket (buffer)
-            // In in = new In(clientSocket);
-            // Out out = new Out(clientSocket);
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
             String s;
@@ -59,7 +57,7 @@ class ClientThread extends Thread {
             }
 
             // Fecha a conexão (e o socket) do cliente específico
-            System.err.println("Closing connection with client");
+            System.err.println("Closing connection with " + clientSocket.getRemoteSocketAddress());
             out.close();
             in.close();
             clientSocket.close();
