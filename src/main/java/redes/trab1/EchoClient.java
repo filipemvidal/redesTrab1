@@ -36,7 +36,7 @@ public class EchoClient {
             // Leitura do que você digitou no terminal
             String s = stdin.nextLine();
             
-            // Envio pelo socket (enviamos APENAS o texto exato para o protocolo funcionar, sem o screenName)
+            // Envio pelo socket
             out.println(s);
             
             // Se o comando for quit, encerra o laço do lado do cliente também
